@@ -1,26 +1,23 @@
 @import '../../variables.scss';
 
-
-canvas {
-  border-style: solid
-}
-
 main {
   min-height: 100vh;
 
   // background: #12c2e9;
   // background: linear-gradient(to right, hsla(356, 90%, 64%, 0.9), hsla(280, 78%, 69%, 0.9), hsla(191, 86%, 49%, 0.9));
 
-  background: $blue2;
+  background: $blue1;
 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .ball {
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.3s ease,
+    shadow-box 0.3s ease;
   border-radius: 50%;
-  background: white;
+  background: $white;
   height: 10em;
   width: 10em;
   position: relative;
@@ -35,25 +32,60 @@ main {
   }
 
   .ball_shadow:nth-child(1) {
-    box-shadow: 29px 8px 31px $blue3;
+    animation: box-animation-40 3s infinite;
   }
 
   .ball_shadow:nth-child(2) {
-    box-shadow: 2px -23px 40px $yellowA;
+    animation: box-animation-80 3s infinite;
   }
 
   .ball_shadow:nth-child(3) {
-    box-shadow: -20px 21px 45px $redA;
+    animation: box-animation-120 3s infinite;
   }
 }
 
 .ball:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
+@keyframes box-animation-40 {
+  0% {
+    box-shadow: 29px 8px 31px $blue3;
+  }
 
+  50% {
+    box-shadow: 50px 8px 31px $blue3;
+  }
 
+  100% {
+    box-shadow: 29px 8px 31px $blue3;
+  }
+}
 
+@keyframes box-animation-80 {
+  0% {
+    box-shadow: 2px -23px 40px $yellowA;
+  }
 
-// transition: width 400ms ease,
-// height 400ms ease;
+  50% {
+    box-shadow: 2px -47px 40px $yellowA;
+  }
+
+  100% {
+    box-shadow: 2px -23px 40px $yellowA;
+  }
+}
+
+@keyframes box-animation-120 {
+  0% {
+    box-shadow: -20px 21px 45px $redA;
+  }
+
+  50% {
+    box-shadow: -30px 32px 45px $redA;
+  }
+
+  100% {
+    box-shadow: -20px 21px 45px $redA;
+  }
+}
