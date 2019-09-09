@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap');
+
+.title {
+  color: $white;
+  text-align: center;
+  padding-top: 20vh;
+  font-family: 'Lexend Giga', sans-serif;
+  font-size: 2em;
+}
+
+.options {
+  float: right;
+  padding: 1em;
+  color: $white;
+
+  i {
+    padding-right: 1em;
+  }
+
+  i:hover {
+    color: $yellowA;
+    cursor: pointer;
+  }
+}
