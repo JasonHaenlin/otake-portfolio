@@ -1,15 +1,26 @@
 @import '../../../variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap');
 
+.background {
+  max-width: 100%;
+  height: calc(30em + calc(40px - 10vw));
+  background: linear-gradient(hsla(203, 71%, 26%, 0.5), hsla(203, 71%, 26%, 0.5)),
+    url('../../../assets/bg.jpg');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(8px);
+}
+
 .title {
   color: $white;
   text-align: center;
-  padding-top: 20vh;
   font-family: 'Lexend Giga', sans-serif;
   font-size: 2em;
 }
 
-.options {
+.container-option {
   float: right;
   padding: 1em;
   color: $white;
@@ -22,4 +33,20 @@
     color: $yellowA;
     cursor: pointer;
   }
+}
+
+.text {
+  color: $white;
+  padding: 15vw 20vw 5vw 20vw;
+}
+
+.container-info {
+  padding-top: 4em;
+}
+
+.info-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7em;
 }

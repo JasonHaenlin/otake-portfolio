@@ -6,15 +6,12 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ShadowBallComponent } from './utility/shadow-ball/shadow-ball.component';
 import { HomeHeaderComponent } from './home-page/home-header/home-header.component';
-import { HomeProfileComponent } from './home-page/home-profile/home-profile.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ShadowBallComponent,
     HomeHeaderComponent,
-    HomeProfileComponent
   ],
   imports: [
     BrowserModule,
