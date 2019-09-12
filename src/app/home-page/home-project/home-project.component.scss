@@ -12,7 +12,6 @@ svg {
   grid-template-columns: 15em 1fr 15em;
   grid-template-rows: 14em;
   grid-template-areas: "svg1 rect svg2";
-  grid-gap: 0.5em;
   padding-bottom: 2em;
 }
 
@@ -61,10 +60,10 @@ svg {
 
 @media (max-width: 900px) {
   .grid-container {
-    grid-template-columns: 10vw 20vw 1fr 20vw 10vw;
+    grid-template-columns: 5vw 20vw 1fr 20vw 5vw;
     grid-template-rows: 15em 10em;
     grid-template-areas:
-      " . . svg . ."
+      " . svg svg svg ."
       " . rect rect rect .";
   }
 

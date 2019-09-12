@@ -13,7 +13,7 @@ $height: 50em;
 
 .content::before {
   position: absolute;
-  left: 15%;
+  left: 8em;
   width: 5px;
   height: $height;
   background-color: $blue2;
@@ -25,11 +25,11 @@ $height: 50em;
   top: 50%;
   height: 3em;
   width: 3em;
-  left: calc(15% - 1.5em + 2.5px);
+  left: calc(8em - 1.5em + 2.5px);
 }
 
 .container {
-  margin: -3em 5em 0 10em;
+  margin: -3em 5em 0 10.5em;
 }
 
 
@@ -39,4 +39,33 @@ $height: 50em;
 
 .container>section:nth-child(even) {
   background-color: $redA;
+}
+
+@media (max-width: 900px) {
+  .content::before {
+    left: 3.5em;
+  }
+
+  .ball {
+    left: calc(3.5em - 1.5em + 2.5px);
+  }
+
+  .container {
+    margin: -3em 2em 0 5.5em;
+  }
+}
+
+@media (max-width: 510px) {
+  .content::before {
+    left: 0;
+    width: 0;
+  }
+
+  .container {
+    margin: -1.5em 0.5em 0 0.5em;
+  }
+
+  .ball {
+    display: none;
+  }
 }

@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .grid-card {
   background-color: hsla(0, 0%, 100%, 0.1);
   border-radius: 4%;
@@ -23,13 +25,34 @@
 .grid-title {
   padding-top: 0.5em;
   grid-area: title;
+  color: $redA;
 }
 
 .grid-date {
   grid-area: date;
+  color: $yellowA;
 }
 
 .grid-description {
   padding-bottom: 0.5em;
   grid-area: description;
+}
+
+@media (max-width: 600px) {
+  .grid-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15em 3ch 3ch 10em;
+    grid-template-areas:
+      "logo"
+      "title"
+      "date"
+      "description";
+    grid-gap: 0ch;
+  }
+
+  .grid-title,
+  .grid-date,
+  .grid-description {
+    padding-left: 1em;
+  }
 }
