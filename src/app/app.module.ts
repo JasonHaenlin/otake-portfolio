@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ShadowBallComponent } from './utility/shadow-ball/shadow-ball.component';
 import { HomeHeaderComponent } from './home-page/home-header/home-header.component';
+import { HomeProjectComponent } from './home-page/home-project/home-project.component';
+import { HomeTimelineComponent } from './home-page/home-timeline/home-timeline.component';
+import { TimeCardComponent } from './utility/time-card/time-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ShadowBallComponent,
     HomeHeaderComponent,
+    HomeProjectComponent,
+    HomeTimelineComponent,
+    TimeCardComponent,
   ],
   imports: [
     BrowserModule,

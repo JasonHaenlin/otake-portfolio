@@ -18,14 +18,17 @@
 
   .ball_shadow:nth-child(1) {
     animation: ball-animation-0 3s infinite ease-in-out;
+    // box-shadow: -20px 30px 45px $blue3;
   }
 
   .ball_shadow:nth-child(2) {
     animation: ball-animation-40 5s infinite ease-in-out;
+    // box-shadow: 2px -23px 40px $yellowA;
   }
 
   .ball_shadow:nth-child(3) {
     animation: ball-animation-80 4s infinite ease-in-out;
+    // box-shadow: 29px 8px 31px $redA;
   }
 }
 
@@ -34,60 +37,60 @@
   padding-top: calc(50% - 1em);
 }
 
-.ball:hover {
-  transform: scale(1.05);
-}
+// .ball:hover {
+//   transform: scale(1.05);
+// }
 
 @keyframes ball-animation-0 {
   from {
-    box-shadow: -20px 30px 45px $blue3;
+    box-shadow: -20px 30px 15px $blue3;
   }
 
   30% {
-    box-shadow: -31px 42px 89px $blue3;
+    box-shadow: -10px 22px 30px $blue3;
   }
 
   60% {
-    box-shadow: -20px 50px 89px $blue3;
+    box-shadow: -20px 10px 30px $blue3;
   }
 
   to {
-    box-shadow: -20px 30px 45px $blue3;
+    box-shadow: -20px 30px 15px $blue3;
   }
 }
 
 @keyframes ball-animation-40 {
   from {
-    box-shadow: 2px -23px 40px $yellowA;
+    box-shadow: 2px -23px 22px $yellowA;
   }
 
   30% {
-    box-shadow: -8px -30px 90px $yellowA;
+    box-shadow: -8px -30px 45px $yellowA;
   }
 
   60% {
-    box-shadow: 8px -26px 90px $yellowA;
+    box-shadow: 8px -26px 45px $yellowA;
   }
 
   to {
-    box-shadow: 2px -23px 40px $yellowA;
+    box-shadow: 2px -23px 22px $yellowA;
   }
 }
 
 @keyframes ball-animation-80 {
   from {
-    box-shadow: 29px 8px 31px $redA;
+    box-shadow: 29px 8px 17px $redA;
   }
 
   30% {
-    box-shadow: -30px 8px 81px $redA;
+    box-shadow: -30px 8px 30px $redA;
   }
 
   60% {
-    box-shadow: 29px 8px 81px $redA;
+    box-shadow: 29px 8px 30px $redA;
   }
 
   to {
-    box-shadow: 29px 8px 31px $redA;
+    box-shadow: 29px 8px 17px $redA;
   }
 }

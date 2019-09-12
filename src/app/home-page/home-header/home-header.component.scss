@@ -3,7 +3,7 @@
 
 .background {
   max-width: 100%;
-  height: calc(30em + calc(40px - 10vw));
+  height: calc(30em + calc(2em - 10vw));
   background: linear-gradient(hsla(203, 71%, 26%, 0.5), hsla(203, 71%, 26%, 0.5)),
     url('../../../assets/bg.jpg');
 
@@ -41,12 +41,12 @@
 }
 
 .container-info {
-  padding-top: 4em;
+  padding-top: 5em;
 }
 
 .info-title {
   position: absolute;
   left: 0;
   right: 0;
-  top: 7em;
+  top: 8em;
 }

@@ -1,0 +1,35 @@
+.grid-card {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 4%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 10em minmax(auto, 30ch);
+  grid-template-rows: 4ch 4ch minmax(10em, auto);
+  grid-template-areas:
+    "logo title"
+    "logo date"
+    "logo description";
+  grid-gap: 1ch;
+}
+
+.grid-logo {
+  grid-area: logo;
+  background-image: url('https://studiobombyx.com/assets/Imageprincipale_TAKENOKO.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-title {
+  padding-top: 0.5em;
+  grid-area: title;
+}
+
+.grid-date {
+  grid-area: date;
+}
+
+.grid-description {
+  padding-bottom: 0.5em;
+  grid-area: description;
+}
