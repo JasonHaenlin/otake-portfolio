@@ -9,6 +9,7 @@ import { HomeHeaderComponent } from './home-page/home-header/home-header.compone
 import { HomeProjectComponent } from './home-page/home-project/home-project.component';
 import { HomeTimelineComponent } from './home-page/home-timeline/home-timeline.component';
 import { TimeCardComponent } from './utility/time-card/time-card.component';
+import { HomeLanguageComponent } from './homePage/home-language/home-language.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { TimeCardComponent } from './utility/time-card/time-card.component';
     HomeProjectComponent,
     HomeTimelineComponent,
     TimeCardComponent,
+    HomeLanguageComponent,
   ],
   imports: [
     BrowserModule,

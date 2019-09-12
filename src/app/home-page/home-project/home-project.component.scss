@@ -28,7 +28,7 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
 
-  mask: url('#form2');
+  mask: url('../../../assets/form1.svg#form1');
 }
 
 .grid-svg2 {
@@ -43,7 +43,7 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
 
-  mask: url('#form1');
+  mask: url('../../../assets/form2.svg#form2');
 }
 
 
@@ -55,7 +55,7 @@ svg {
   background-color: hsla(0, 0%, 100%, 0.1);
   border-radius: 4%;
   height: 100%;
-  padding: 0.5em;
+  padding: 1em;
   line-height: 1.1em;
 }
 
