@@ -1,22 +1,21 @@
 @import '../../../variables.scss';
 
-$height: 100em;
-
 .title {
   padding: 2em;
   font-size: 28px;
 }
 
 .content {
+  position: relative;
   margin-top: 2em;
-  height: $height;
+  height: 100%;
 }
 
 .content::before {
   position: absolute;
+  height: 100%;
   left: 8em;
   width: 5px;
-  height: $height;
   background-color: $blue2;
   content: "";
 }

@@ -6,7 +6,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 15em minmax(auto, 30ch);
-  grid-template-rows: 4ch 4ch 4ch minmax(5em, auto);
+  grid-template-rows: 6ch 3ch 3ch minmax(5em, auto);
   grid-template-areas:
     "logo title"
     "logo venue"
@@ -24,6 +24,7 @@
 }
 
 .grid-title {
+  font-size: 23px;
   padding-top: 0.5em;
   grid-area: title;
   color: $redA;
@@ -46,12 +47,11 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1015px) {
   .grid-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15em 3ch 3ch 3ch 10em;
-    grid-template-areas:
-      "logo"
+    grid-template-rows: 15em minmax(6ch, auto) minmax(3ch, auto) 3ch minmax(5em, auto);
+    grid-template-areas: "logo"
       "title"
       "venue"
       "date"
@@ -61,6 +61,7 @@
 
   .grid-title,
   .grid-date,
+  .grid-venue,
   .grid-description {
     padding-left: 1em;
   }
