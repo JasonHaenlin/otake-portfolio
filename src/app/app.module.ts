@@ -12,6 +12,7 @@ import { TimeCardComponent } from './utility/time-card/time-card.component';
 import { HomeLanguageComponent } from './home-page/home-language/home-language.component';
 import { LangageAchievementComponent } from './utility/langage-achievement/langage-achievement.component';
 import { HomeHobbiesComponent } from './home-page/home-hobbies/home-hobbies.component';
+import { HomeFooterComponent } from './home-page/home-footer/home-footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { HomeHobbiesComponent } from './home-page/home-hobbies/home-hobbies.comp
     HomeLanguageComponent,
     LangageAchievementComponent,
     HomeHobbiesComponent,
+    HomeFooterComponent,
   ],
   imports: [
     BrowserModule,
