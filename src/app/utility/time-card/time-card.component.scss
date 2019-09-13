@@ -5,18 +5,19 @@
   border-radius: 4%;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 10em minmax(auto, 30ch);
-  grid-template-rows: 4ch 4ch minmax(10em, auto);
+  grid-template-columns: 15em minmax(auto, 30ch);
+  grid-template-rows: 4ch 4ch 4ch minmax(5em, auto);
   grid-template-areas:
     "logo title"
+    "logo venue"
     "logo date"
     "logo description";
   grid-gap: 1ch;
+  margin-block-end: 1em;
 }
 
 .grid-logo {
   grid-area: logo;
-  background-image: url('https://studiobombyx.com/assets/Imageprincipale_TAKENOKO.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,9 +29,15 @@
   color: $redA;
 }
 
+.grid-venue {
+  grid-area: venue;
+  color: $yellowA;
+}
+
 .grid-date {
   grid-area: date;
-  color: $yellowA;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
 }
 
 .grid-description {
@@ -38,13 +45,15 @@
   grid-area: description;
 }
 
+
 @media (max-width: 600px) {
   .grid-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15em 3ch 3ch 10em;
+    grid-template-rows: 15em 3ch 3ch 3ch 10em;
     grid-template-areas:
       "logo"
       "title"
+      "venue"
       "date"
       "description";
     grid-gap: 0ch;

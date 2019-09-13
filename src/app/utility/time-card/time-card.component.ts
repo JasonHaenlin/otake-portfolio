@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-time-card',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimeCardComponent implements OnInit {
 
+  @Input() image: string;
+  @Input() title: string;
+  @Input() venue: string;
+  @Input() date: string;
+  @Input() description: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.image = 'url("../../../assets/' + this.image + '")';
   }
+
 
 }

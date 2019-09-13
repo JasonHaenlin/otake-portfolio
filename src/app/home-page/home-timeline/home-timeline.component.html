@@ -1,11 +1,91 @@
 <div class="title">
-  <strong>TIMELINE</strong>
+  <strong>EDUCATION</strong>
 </div>
 <div class="content">
   <div class="ball">
     <app-shadow-ball></app-shadow-ball>
   </div>
   <div class="container">
-    <app-time-card></app-time-card>
+    <app-time-card
+      [image]="'img/lexis.jpg'"
+      [title]="'Student in Korean'"
+      [venue]="'Lexis Korea - 렉시스 코리아 '"
+      [date]="'from July to August 2019 (3 weeks)'"
+      [description]="'Language trip to South Korea to discover the culture and its language.'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/akamonkai.jpg'"
+      [title]="'Student un Japanese'"
+      [venue]="'Akamonkai Japanese language school'"
+      [date]="'from July to August 2018 (3 weeks)'"
+      [description]="'Second language trip to Japan in Tokyo'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/poly.jpg'"
+      [title]="'Engineering school - Computer Sciences'"
+      [venue]="'Polytech Nice Sophia'"
+      [date]="'from September 2017'"
+      [description]="'Learning the basics of computer programming. Network, database, algorithm, projects, project management, web, system, etc'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/ccfj.jpg'"
+      [title]="'Student in Japanese'"
+      [venue]="'Franco-Japanese Cultural Centre (CCFJ)'"
+      [date]="'from July to August 2017 (4 weeks)'"
+      [description]="'Language trip to Osaka, Japan to learn the Japanese language and discover this amazing culture'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/iut.jpg'"
+      [title]="'Electrical engineering and industrial computer science major'"
+      [venue]="'University of Nice Sophia Antipolis'"
+      [date]="'from September 2014 to July 2017'"
+      [description]="'Training of electronics, energy and automatic systems (Internet of thing, automation, etc.)'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/highschool.jpg'"
+      [title]="'Professional Baccalaureate in Electrotechnics'"
+      [venue]="'Léon Chiris High School'"
+      [date]="'from September 2012 to July 2014'"
+      [description]="'Training of electronics, energy and automatic systems (Internet of thing, automation, etc.)'">
+    </app-time-card>
   </div>
 </div>
+
+<div class="title">
+  <strong>WORK EXPERIENCE</strong>
+</div>
+<div class="content">
+  <div class="ball">
+    <app-shadow-ball></app-shadow-ball>
+  </div>
+  <div class="container">
+    <app-time-card
+      [image]="'img/fantastic.png'"
+      [title]="'Engineer apprentice in research and development'"
+      [venue]="'FantastiC Sourcing'"
+      [date]="'from June 2018 to July 2018 (6 weeks)'"
+      [description]="'Development of a Node-Red package for a sensor network allowing to define actions in adequacy with the state of the sensors to activate any actuator(s). This package offers the user the possibility to define the conditions and actuators himself.'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/lpwan.jpg'"
+      [title]="'Engineer apprentice in research and development'"
+      [venue]="'FantastiC Sourcing'"
+      [date]="'from July 2017 to August 2017'"
+      [description]="'Work on the Nodeus project and LPWAN (Low Power Wide Area Network) technology.'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/fs1.jpg'"
+      [title]="'Internship in research and development'"
+      [venue]="'FantastiC Sourcing'"
+      [date]="'from April 2017 to June 2017 (10 weeks)'"
+      [description]="'Design of sensors for the Nodeus project (assistance to people requiring special monitoring).
+End of study internship for my university and technological degree in electrical engineering and industrial computer science.'">
+    </app-time-card>
+    <app-time-card
+      [image]="'img/fs.jpg'"
+      [title]="'Technician of Studies and Development'"
+      [venue]="'FantastiC Sourcing'"
+      [date]="'from Septembre 2016 to Octobre 2016 (8 weeks)'"
+      [description]="'Work on prototypes of connected devices.'">
+    </app-time-card>
+  </div>
