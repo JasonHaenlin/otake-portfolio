@@ -6,8 +6,48 @@ svg {
 }
 
 footer {
-  margin: 0;
+  font-size: 15px;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   width: 100%;
-  height: 10em;
   background-color: $blue2;
+}
+
+img {
+  position: relative;
+  top: 0.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2em;
+}
+
+footer>div:nth-child(1) {
+  text-align: center;
+  height: 5em;
+}
+
+footer>div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+span {
+  padding: 0.25em;
+}
+
+.angular {
+  font-size: 13px;
+  width: 50%;
+}
+
+.info {
+  display: block;
+  width: 50%;
+}
+
+.info>div {
+  float: right;
 }
