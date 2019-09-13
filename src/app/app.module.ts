@@ -13,6 +13,7 @@ import { HomeLanguageComponent } from './home-page/home-language/home-language.c
 import { LangageAchievementComponent } from './utility/langage-achievement/langage-achievement.component';
 import { HomeHobbiesComponent } from './home-page/home-hobbies/home-hobbies.component';
 import { HomeFooterComponent } from './home-page/home-footer/home-footer.component';
+import { HomeRatingComponent } from './home-page/home-rating/home-rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { HomeFooterComponent } from './home-page/home-footer/home-footer.compone
     LangageAchievementComponent,
     HomeHobbiesComponent,
     HomeFooterComponent,
+    HomeRatingComponent,
   ],
   imports: [
     BrowserModule,

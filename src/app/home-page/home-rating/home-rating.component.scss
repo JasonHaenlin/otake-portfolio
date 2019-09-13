@@ -1,0 +1,35 @@
+@import '../../../variables.scss';
+
+.title {
+  padding: 2em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.rating {
+  width: 8em;
+  height: 10em;
+  background-color: $blueO;
+  border-radius: 4%;
+}
+
+.logo {
+  height: 80%;
+  background-image: url('https://angular.io/assets/images/logos/angular/angular.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fa-star {
+  color: $yellowA;
+}
+
+.stars {
+  text-align: center;
+}
