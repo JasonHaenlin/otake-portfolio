@@ -2,14 +2,12 @@
   <strong>RATING</strong>
 </div>
 <div class="flex-container">
-  <div class="rating">
-    <div class="logo"></div>
-    <div class="stars">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="far fa-star"></i>
-    </div>
-  </div>
+  <app-rating class="rating"
+    [logo]="'angular.svg'"
+    [rate]=5>
+  </app-rating>
+  <app-rating class="rating"
+    [logo]="'python.png'"
+    [rate]=0>
+  </app-rating>
 </div>

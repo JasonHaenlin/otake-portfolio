@@ -1,6 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription, fromEvent } from 'rxjs';
-import { debounceTime } from 'rxjs/internal/operators';
+import { Component, OnInit } from '@angular/core';
 
 const SCROLL_TIME = 50;
 
@@ -9,37 +7,11 @@ const SCROLL_TIME = 50;
   templateUrl: './home-timeline.component.html',
   styleUrls: ['./home-timeline.component.scss']
 })
-export class HomeTimelineComponent implements OnInit, OnDestroy {
-
-  private scrollSub: Subscription = new Subscription();
+export class HomeTimelineComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-    this.subToScrollEvent();
   }
-
-  ngOnDestroy(): void {
-    this.unsubScrollEvent();
-  }
-
-
-  private updateScrollPosition(): void {
-    console.log(document.body.offsetHeight + ' ' + window.scrollY + ' ' + document.body.scrollHeight);
-
-  }
-
-  private subToScrollEvent() {
-    this.scrollSub = fromEvent(window, 'scroll')
-      .pipe(debounceTime(SCROLL_TIME))
-      .subscribe(() => this.updateScrollPosition());
-  }
-
-  private unsubScrollEvent() {
-    if (!this.scrollSub.closed) {
-      this.scrollSub.unsubscribe();
-    }
-  }
-
 
 }

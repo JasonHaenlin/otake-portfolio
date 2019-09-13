@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+.logo {
+  height: 8em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fa-star {
+  color: $yellowA;
+}
+
+.stars {
+  text-align: center;
+}
