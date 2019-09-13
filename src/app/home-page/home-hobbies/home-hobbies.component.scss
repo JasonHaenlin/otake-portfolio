@@ -1,0 +1,29 @@
+@import '../../../variables.scss';
+
+.title {
+  padding: 2em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1em;
+  padding-bottom: 12em;
+}
+
+.hobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  background-color: $blueO;
+}
+
+.tag {
+  text-align: center;
+  padding-top: 0.5em;
+}

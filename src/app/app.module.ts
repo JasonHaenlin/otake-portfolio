@@ -11,6 +11,7 @@ import { HomeTimelineComponent } from './home-page/home-timeline/home-timeline.c
 import { TimeCardComponent } from './utility/time-card/time-card.component';
 import { HomeLanguageComponent } from './home-page/home-language/home-language.component';
 import { LangageAchievementComponent } from './utility/langage-achievement/langage-achievement.component';
+import { HomeHobbiesComponent } from './home-page/home-hobbies/home-hobbies.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { LangageAchievementComponent } from './utility/langage-achievement/langa
     TimeCardComponent,
     HomeLanguageComponent,
     LangageAchievementComponent,
+    HomeHobbiesComponent,
   ],
   imports: [
     BrowserModule,
