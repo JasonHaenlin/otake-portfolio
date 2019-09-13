@@ -34,6 +34,18 @@ footer>div:nth-child(2) {
   justify-content: space-between;
 }
 
+a {
+  color: $white;
+  margin: 0.25em;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  box-shadow:
+    -9px 5px 15px $blue3, 1px 9px 22px $yellowA, 20px 5px 17px $redA;
+}
+
 span {
   padding: 0.25em;
 }
