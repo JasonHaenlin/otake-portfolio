@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <div [ngClass]="{
+    'grid-svg1': side !== 'right',
+    'grid-svg2': side === 'right'
+    }"
+    [style.background-image]="image">
+  </div>
+  <div class="rect grid-rect">
+    <div [innerHTML]="description"></div>
+    <div *ngIf="githubLink" class="git">
+      <a target="_blank" rel="noopener noreferrer"
+        [href]="githubLink">
+        <img src="../../../assets/logos/GitHub-Mark-Light-120px-plus.png" alt="<(^^)>">
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+@import '../../../variables.scss';
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15em 1fr 15em;
+  grid-template-rows: 14em;
+  grid-template-areas: "svg1 rect svg2";
+  padding-bottom: 2em;
+}
+
+.grid-svg1 {
+  grid-area: svg1;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: calc(90% - 1em);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  mask: url('../../../assets/form1.svg#form1');
+}
+
+.grid-svg2 {
+  grid-area: svg2;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: calc(90% - 1em);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  mask: url('../../../assets/form2.svg#form2');
+}
+
+
+.grid-rect {
+  grid-area: rect;
+}
+
+.rect {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 4%;
+  height: 100%;
+  padding: 1em;
+  line-height: 1.1em;
+}
+
+.git {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  height: 3em;
+  width: 3em;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+img:hover {
+  cursor: pointer;
+  filter: drop-shadow(-10px 1px 10px #3792a4) drop-shadow(10px 10px 10px #f0bc5c) drop-shadow(10px -10px 10px #bc451a);
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 5vw 20vw 1fr 20vw 5vw;
+    grid-template-rows: 15em 10em;
+    grid-template-areas:
+      " . svg svg svg ."
+      " . rect rect rect .";
+  }
+
+  .grid-svg2,
+  .grid-svg1 {
+    grid-area: svg;
+  }
+
+}
