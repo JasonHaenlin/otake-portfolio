@@ -3,7 +3,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 15em 1fr 15em;
-  grid-template-rows: 14em;
+  grid-template-rows: minmax(10em, auto);
   grid-template-areas: "svg1 rect svg2";
   padding-bottom: 2em;
 }
@@ -71,7 +71,7 @@ img:hover {
 @media (max-width: 900px) {
   .grid-container {
     grid-template-columns: 5vw 20vw 1fr 20vw 5vw;
-    grid-template-rows: 15em 10em;
+    grid-template-rows: 15em minmax(10em, auto);
     grid-template-areas:
       " . svg svg svg ."
       " . rect rect rect .";
