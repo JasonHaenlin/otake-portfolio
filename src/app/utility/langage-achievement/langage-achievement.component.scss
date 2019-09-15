@@ -6,8 +6,11 @@ circle {
   stroke-width: 10;
   stroke-linecap: round;
   stroke-dashoffset: 200;
-  animation: 1s ease-out forwards progress;
   fill: $blueO;
+}
+
+.animate {
+  animation: 1s ease-out forwards progress;
 }
 
 .flex-container>div {

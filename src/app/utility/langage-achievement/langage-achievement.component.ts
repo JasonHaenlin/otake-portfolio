@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-langage-achievement',
   templateUrl: './langage-achievement.component.html',
-  styleUrls: ['./langage-achievement.component.scss']
+  styleUrls: ['./langage-achievement.component.scss'],
 })
 export class LangageAchievementComponent implements OnInit {
 

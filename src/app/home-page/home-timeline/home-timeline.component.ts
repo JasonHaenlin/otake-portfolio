@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
-const SCROLL_TIME = 50;
+import { animation } from 'src/app/animation';
 
 @Component({
   selector: 'app-home-timeline',
   templateUrl: './home-timeline.component.html',
-  styleUrls: ['./home-timeline.component.scss']
+  styleUrls: ['./home-timeline.component.scss'],
+  animations: [animation]
 })
 export class HomeTimelineComponent implements OnInit {
 

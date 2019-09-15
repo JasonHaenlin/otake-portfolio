@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +17,8 @@ import { HomeFooterComponent } from './home-page/home-footer/home-footer.compone
 import { HomeRatingComponent } from './home-page/home-rating/home-rating.component';
 import { RatingComponent } from './utility/rating/rating.component';
 import { ProjectCardComponent } from './utility/project-card/project-card.component';
+import { VisibleWithDirective } from './visible-with.directive';
+import { VisibilityService } from './visibility.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,12 +35,14 @@ import { ProjectCardComponent } from './utility/project-card/project-card.compon
     HomeRatingComponent,
     RatingComponent,
     ProjectCardComponent,
+    VisibleWithDirective,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [VisibilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

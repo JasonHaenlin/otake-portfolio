@@ -5,8 +5,8 @@
   <div class="ball">
     <app-shadow-ball></app-shadow-ball>
   </div>
-  <div class="container">
-    <app-time-card
+  <div #wrapper class="container">
+    <app-time-card *appVisibleWith="wrapper"
       [image]="'img/lexis.jpg'"
       [title]="'Student in Korean'"
       [venue]="'Lexis Korea - 렉시스 코리아 '"
