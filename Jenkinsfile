@@ -51,7 +51,7 @@ pipeline {
             sh '''
             sg otake -c 'npm run deploy'
             sg otake -c 'rm -rf /var/www/html/portfolio/*'
-            sg otake -c 'mv dist/starter-project/* /var/www/html/portfolio/'
+            sg otake -c 'mv dist/otakeWebHome/* /var/www/html/portfolio/'
             '''
           }
         }
