@@ -20,6 +20,9 @@
   background-size: cover;
 
   mask: url('../../../assets/form1.svg#form1');
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 .grid-svg2 {
@@ -28,12 +31,14 @@
   margin-top: 1em;
   margin-bottom: 1em;
   width: calc(90% - 1em);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   mask: url('../../../assets/form2.svg#form2');
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 
 
@@ -44,7 +49,7 @@
 .rect {
   position: relative;
   background-color: hsla(0, 0%, 100%, 0.1);
-  border-radius: 4%;
+  border-radius: 8px;
   height: 100%;
   padding: 1em;
   line-height: 1.1em;
