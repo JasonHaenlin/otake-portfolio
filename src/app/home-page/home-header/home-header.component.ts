@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 @Component({
   selector: 'app-home-header',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-header.component.scss']
 })
 export class HomeHeaderComponent implements OnInit {
+  public targetElement = null;
+
+  public menu: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.menu = true;
+    this.targetElement = document.body;
   }
 
+  showMenu() {
+    this.menu = true;
+    disableBodyScroll(this.targetElement);
+  }
+
+  hideMenu() {
+    this.menu = false;
+    enableBodyScroll(this.targetElement);
+  }
 }

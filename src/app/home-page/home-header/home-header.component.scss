@@ -32,12 +32,12 @@
   color: $white;
 
   i {
-    padding-right: 1em;
+    margin-right: 1em;
   }
 
   i:hover {
-    color: $yellowA;
     cursor: pointer;
+    color: $yellowA;
   }
 }
 
@@ -55,6 +55,51 @@
   left: 0;
   right: 0;
   top: 8em;
+}
+
+.menu {
+  position: fixed;
+  z-index: 100;
+  background: hsla(206, 74%, 10%, 0.8);
+  height: 100%;
+  width: 100%;
+}
+
+.menu__category {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu>.container-option {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  padding-top: 0.5em;
+}
+
+.menu__category>div {
+  margin: 0.5em;
+}
+
+.menu__category>div:hover {
+  cursor: pointer;
+  color: $yellowA;
+
+  a {
+    color: $yellowA;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.fa-bars {
+  color: rgb(111, 134, 153);
 }
 
 @media (max-width: 580px) {

@@ -1,7 +1,22 @@
 <div class="container">
+
+  <div *ngIf="menu">
+    <div class="menu">
+      <div class="container-option">
+        <i class="fas fa-times fa-2x" (click)="hideMenu()"></i>
+      </div>
+      <div class="menu__category">
+        <div><a target="_blank" rel="noopener noreferrer"
+            href="https://otakedev.com/share/resume/Snapshot_resume%20Jason_haenlin_2019-10-28.pdf">Download
+            PDF</a></div>
+        <div><a target="_blank" rel="noopener noreferrer"
+            href="https://otakedev.com/jasonhaenlin/">Online Resume</a></div>
+      </div>
+    </div>
+  </div>
+
   <div class="container-option">
-    <!-- <i class="fas fa-download"></i> -->
-    <!-- <i class="fas fa-bars"></i> -->
+    <i class="fas fa-bars" (click)="showMenu()"></i>
   </div>
 
   <div class="container-info">
