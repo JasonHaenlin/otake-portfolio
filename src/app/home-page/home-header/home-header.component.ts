@@ -14,7 +14,7 @@ export class HomeHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.menu = true;
+    this.menu = false;
     this.targetElement = document.body;
   }
 
