@@ -2,3 +2,15 @@
   min-height: 100vh;
   margin: 0 auto;
 }
+
+#info {
+  position: fixed;
+  width: 60%;
+  z-index: 2;
+  margin: auto;
+  margin-left: 20%;
+}
+
+#router {
+  z-index: 1;
+}

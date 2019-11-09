@@ -3,7 +3,7 @@
   <div [@flyInOut] *ngIf="menu">
     <div class="menu">
       <div class="container-option">
-        <i class="fas fa-times fa-2x" (click)="hideMenu()"></i>
+        <span class="fas fa-times fa-2x" (click)="hideMenu()"></span>
       </div>
       <div class="menu__category">
         <div><a target="_blank" rel="noopener noreferrer"
@@ -16,7 +16,7 @@
   </div>
 
   <div class="container-option">
-    <i class="fas fa-bars" (click)="showMenu()"></i>
+    <span class="fas fa-bars" (click)="showMenu()"></span>
   </div>
 
   <div class="container-info">

@@ -19,6 +19,7 @@ import { RatingComponent } from './utility/rating/rating.component';
 import { ProjectCardComponent } from './utility/project-card/project-card.component';
 import { VisibleWithDirective } from './visible-with.directive';
 import { VisibilityService } from './visibility.service';
+import { HeaderInfoComponent } from './home-page/header-info/header-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { VisibilityService } from './visibility.service';
     RatingComponent,
     ProjectCardComponent,
     VisibleWithDirective,
+    HeaderInfoComponent,
   ],
   imports: [
     BrowserAnimationsModule,
