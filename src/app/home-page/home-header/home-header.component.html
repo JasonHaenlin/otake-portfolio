@@ -1,6 +1,6 @@
-<div class="container">
+<div>
 
-  <div [@flyInOut] *ngIf="menu">
+  <div *ngIf="menu">
     <div class="menu">
       <div class="container-option">
         <span class="fas fa-times fa-2x" (click)="hideMenu()"></span>
@@ -16,22 +16,22 @@
   </div>
 
   <div class="container-option">
-    <span class="fas fa-bars" (click)="showMenu()"></span>
+    <span class="fas fa-bars fa-2x" (click)="showMenu()"></span>
   </div>
 
-  <div class="container-info">
-    <div class="background"></div>
-
-    <div class="info-title">
-      <div class="title">JASON HAENLIN</div>
-      <div class="occupation">Student at Polytech Nice Sophia. Computer science degree.</div>
-      <div class="text">
-        Hello, my name is Jason Haenlin. Student passionate about electronics, electrical
-        engineering
-        especially computer science, the points that captivate me the most are object-oriented
-        programming,
-        web technologies and everything that goes with it like GUI, security, front & back end, I am
-        particularly fond of Angular 7+, Nodejs Flutter.
+  <div class="card">
+    <div class="card_title">JASON HAENLIN</div>
+    <div class="card_occupation">Student at Polytech Nice Sophia. Computer science degree.</div>
+    <div class="card_text">
+      Hello, my name is Jason Haenlin. Student passionate about electronics, electrical
+      engineering
+      especially computer science, the points that captivate me the most are object-oriented
+      programming,
+      web technologies and everything that goes with it like GUI, security, front & back end, I am
+      particularly fond of Angular 7+, Nodejs Flutter.
+    </div>
+    <div class="card_picture">
+      <div class="clip-each border-style-gradient">
       </div>
     </div>
 

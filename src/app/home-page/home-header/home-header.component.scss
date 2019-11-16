@@ -13,23 +13,11 @@
   filter: blur(8px);
 }
 
-.title {
-  color: $white;
-  text-align: center;
-  font-family: 'Lexend Giga', sans-serif;
-  font-size: 32px;
-}
-
-.occupation {
-  text-align: center;
-  font-family: 'Lexend Giga', sans-serif;
-  font-size: 16px;
-}
-
 .container-option {
-  float: right;
-  padding: 1em;
+  position: fixed;
   color: $white;
+  right: 0.5em;
+  top: 1em;
 
   span {
     margin-right: 1em;
@@ -41,20 +29,50 @@
   }
 }
 
-.text {
+// linear-gradient(to right, $yellowA 0%, $blue3 50%, $redA 100%);
+
+.card {
+  background: linear-gradient(to bottom, $blue3 0%, $blue2 50%, $blue2b 100%);
+  // color: #333;
   color: $white;
-  padding: 10vw 20vw 5vw 16vw;
-}
-
-.container-info {
+  height: 100vh;
+  padding: 5em;
   padding-top: 5em;
+  padding-bottom: 0;
+  display: grid;
+  grid-template-rows: 2em 4em 4em 30vw 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "title picture"
+    "occupation picture"
+    ". picture"
+    "text picture"
+    "text .";
+  gap: 1em;
 }
 
-.info-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 8em;
+.card_text {
+  grid-area: text;
+  font-size: 18px;
+}
+
+.card_title {
+  grid-area: title;
+  font-family: 'Lexend Giga', sans-serif;
+  font-size: 32px;
+}
+
+.card_occupation {
+  grid-area: occupation;
+  font-family: 'Lexend Giga', sans-serif;
+  font-size: 16px;
+}
+
+.card_picture {
+  margin: 1em;
+  margin-top: 0;
+  grid-area: picture;
+  justify-self: center;
 }
 
 .menu {
@@ -71,13 +89,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.menu>.container-option {
-  position: absolute;
-  right: 0;
-  padding: 0;
-  padding-top: 0.5em;
 }
 
 .menu__category>div {
@@ -98,13 +109,56 @@ a {
   color: $white;
 }
 
-.fa-bars {
-  color: rgb(111, 134, 153);
+
+.clip-each {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+}
+
+.clip-each:after {
+  content: "";
+  position: absolute;
+  background-image: url("../../../assets/P90408-133253-50.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clip-each,
+.clip-each:after {
+  clip-path: circle(50%);
+}
+
+
+.border-style-gradient {
+  background: linear-gradient(to right, $yellowA 0%, $blue3 50%, $redA 100%);
+}
+
+.border-style-gradient:after {
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
 }
 
 @media (max-width: 580px) {
-  .text {
-    font-size: 15px;
-    padding: 6vw 20vw 8vw 8vw;
+  .card {
+    padding: 0.5em;
+    height: auto;
+    grid-template-rows: 10em 4em 4em 2em 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "picture"
+      "title"
+      "occupation"
+      "."
+      "text";
   }
+
+  .clip-each {
+    width: 10em;
+    height: 10em;
+  }
+
 }
