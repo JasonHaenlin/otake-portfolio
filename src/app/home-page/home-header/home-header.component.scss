@@ -40,7 +40,7 @@
   padding-top: 10em;
   padding-bottom: 0;
   display: grid;
-  grid-template-rows: 2em 4em 4em 30vw 1fr;
+  grid-template-rows: 2em 4em 2em 30vw 1fr;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "title picture"
@@ -53,7 +53,7 @@
 
 .card_text {
   grid-area: text;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .card_title {
@@ -65,7 +65,7 @@
 .card_occupation {
   grid-area: occupation;
   font-family: 'Lexend Giga', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .card_picture {
@@ -136,13 +136,13 @@ a {
 }
 
 .border-style-gradient:after {
-  top: 14px;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 900px) {
   .card {
     padding: 0.5em;
     height: auto;
