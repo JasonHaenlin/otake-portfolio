@@ -7,11 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderInfoComponent implements OnInit {
 
-  public notif: boolean;
+  public notif = true;
 
-  constructor() {
-    this.notif = true;
-  }
+  constructor() { }
 
   ngOnInit() {
   }

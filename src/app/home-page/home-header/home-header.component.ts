@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Subscription, fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
+
+const SCROLL_TIME = 100;
 
 @Component({
   selector: 'app-home-header',
@@ -19,17 +23,24 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class HomeHeaderComponent implements OnInit {
-  public targetElement = null;
+export class HomeHeaderComponent implements OnInit, OnDestroy {
+  private scrollSub: Subscription = new Subscription();
 
-  public menu: boolean;
+  public menu = false;
+  public targetElement = null;
+  public displayArrow = true;
 
   constructor() { }
 
   ngOnInit() {
-    this.menu = false;
     this.targetElement = document.body;
+    this.subToScrollEvent();
   }
+
+  ngOnDestroy(): void {
+    this.unsubScrollEvent();
+  }
+
 
   showMenu() {
     this.menu = true;
@@ -39,5 +50,25 @@ export class HomeHeaderComponent implements OnInit {
   hideMenu() {
     this.menu = false;
     enableBodyScroll(this.targetElement);
+  }
+
+  private subToScrollEvent() {
+    this.scrollSub = fromEvent(window, 'scroll')
+      .pipe(debounceTime(SCROLL_TIME))
+      .subscribe(() => {
+        if (window.pageYOffset > (document.body.offsetHeight / 4)) {
+          this.displayArrow = false;
+        } else {
+          this.displayArrow = true;
+        }
+
+
+      });
+  }
+
+  private unsubScrollEvent() {
+    if (!this.scrollSub.closed) {
+      this.scrollSub.unsubscribe();
+    }
   }
 }
