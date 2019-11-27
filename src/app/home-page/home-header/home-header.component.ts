@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Subscription, fromEvent } from 'rxjs';
@@ -11,26 +11,48 @@ const SCROLL_TIME = 100;
   templateUrl: './home-header.component.html',
   styleUrls: ['./home-header.component.scss'],
   animations: [
-    trigger('flyInOut', [
-      state('in', style({ transform: 'translateX(0)' })),
-      transition('void => *', [
-        style({ transform: 'translateX(-100%)' }),
-        animate(200)
-      ]),
-      transition('* => void', [
-        animate(200, style({ transform: 'translateX(100%)' }))
-      ])
+    trigger('floatMovement', [
+      state('base', style({ transform: 'translateY(0)' })),
+      state('move', style({ transform: 'translateY(-30%)' })),
+      transition('* <=> *', animate('1s linear'))
     ])
   ]
 })
-export class HomeHeaderComponent implements OnInit, OnDestroy {
+export class HomeHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   private scrollSub: Subscription = new Subscription();
 
   public menu = false;
   public targetElement = null;
   public displayArrow = true;
+  public state = 'base';
 
   constructor() { }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.state = 'move';
+    }, 0);
+  }
+
+  onEnd(event) {
+    this.state = 'base';
+    if (event.toState === 'base') {
+      setTimeout(() => {
+        this.state = 'move';
+      }, 0);
+    }
+  }
+
+  moveDown() {
+    let scrollOfSetY = 0;
+    const interval = setInterval(() => {
+      scrollOfSetY += 10;
+      window.scroll(0, scrollOfSetY);
+      if (window.pageYOffset >= document.body.offsetHeight) {
+        clearInterval(interval);
+      }
+    }, 1);
+  }
 
   ngOnInit() {
     this.targetElement = document.body;
@@ -61,8 +83,6 @@ export class HomeHeaderComponent implements OnInit, OnDestroy {
         } else {
           this.displayArrow = true;
         }
-
-
       });
   }
 

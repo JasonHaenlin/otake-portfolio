@@ -153,6 +153,11 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   bottom: 0em;
+  opacity: 35%;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

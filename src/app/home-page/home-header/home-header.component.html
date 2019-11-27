@@ -1,4 +1,4 @@
-<div>
+<div [@.disabled]="!displayArrow">
 
   <div *ngIf="menu">
     <div class="menu">
@@ -36,5 +36,7 @@
     </div>
   </div>
 
-  <div *ngIf="displayArrow" class="arrow"></div>
+  <div [@floatMovement]="state" (@floatMovement.done)="onEnd($event)" *ngIf="displayArrow"
+    class="arrow" (click)="moveDown()">
+  </div>
 </div>
