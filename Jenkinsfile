@@ -32,19 +32,6 @@ pipeline {
         expression { env.GIT_BRANCH == 'master' }
       }
       stages {
-        stage('Snyk') {
-          steps {
-            echo 'Snyk Diagnosis'
-            sh 'snyk test --severity-medium'
-            sh 'snyk monitor'
-          }
-        }
-        // ls -ld /var/www/site1/
-        // sudo addgroup site1
-        // sudo adduser user1 site1
-        // sudo chown -vR :site1 /var/www/site1/
-        // sudo chmod -vR g+w /var/www/site1/
-        // sudo adduser www-data site1
         stage('Server Deployment') {
           steps {
             echo 'Deployement'
