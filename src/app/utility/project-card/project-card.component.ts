@@ -11,6 +11,7 @@ export class ProjectCardComponent implements OnInit {
   @Input() side: string;
   @Input() description: string;
   @Input() githubLink: string;
+  @Input() videoLink: string;
 
   constructor() { }
 

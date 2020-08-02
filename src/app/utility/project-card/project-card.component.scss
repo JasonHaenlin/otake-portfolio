@@ -55,16 +55,16 @@
   line-height: 1.1em;
 }
 
-.git {
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  height: 3em;
-  width: 3em;
+.link {
+  padding-top: 1em;
+
+  >a {
+    padding: 1em;
+  }
 
   img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 1.5em;
   }
 }
 

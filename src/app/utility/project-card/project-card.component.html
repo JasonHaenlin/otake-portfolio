@@ -7,10 +7,14 @@
   </div>
   <div class="rect grid-rect">
     <div [innerHTML]="description"></div>
-    <div *ngIf="githubLink" class="git">
-      <a target="_blank" rel="noopener noreferrer"
+    <div class="link">
+      <a *ngIf="githubLink" target="_blank" rel="noopener noreferrer"
         [href]="githubLink">
         <img src="../../../assets/logos/GitHub-Mark-Light-120px-plus.png" alt="<(^^)>">
+      </a>
+      <a *ngIf="videoLink" target="_blank" rel="noopener noreferrer"
+        [href]="videoLink">
+        <img src="../../../assets/logos/yt_logo_mono_dark.png" alt="<(^^)>">
       </a>
     </div>
   </div>

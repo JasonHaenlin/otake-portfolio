@@ -1,22 +1,19 @@
 <div [@.disabled]="!displayArrow">
 
-  <div *ngIf="menu">
-    <div class="menu">
-      <div class="container-option">
-        <span class="fas fa-times fa-2x" (click)="hideMenu()"></span>
-      </div>
-      <div class="menu__category">
-        <div><a target="_blank" rel="noopener noreferrer"
-            href="https://otakedev.com/share/resume/Snapshot_resume_Jason_haenlin_2019-11-14.pdf">Download
-            PDF</a></div>
-        <div><a target="_blank" rel="noopener noreferrer"
-            href="https://otakedev.com/jasonhaenlin/">Online Resume</a></div>
-      </div>
+  <div class="menu"
+    [ngClass]="{'hamburger--spin is-active': menuActive}">
+    <button (click)="toggleMenu()" class="hamburger" type="button" aria-label="dropdown">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div *ngIf="menuActive" class="menu__category">
+      <div><a target="_blank" rel="noopener noreferrer"
+          href="https://otakedev.com/share/resume/Snapshot_resume_Jason_haenlin_2019-11-14.pdf">Download
+          PDF</a></div>
+      <div><a target="_blank" rel="noopener noreferrer"
+          href="https://otakedev.com/jasonhaenlin/">Online Resume</a></div>
     </div>
-  </div>
-
-  <div class="container-option">
-    <span class="fas fa-bars fa-2x" (click)="showMenu()"></span>
   </div>
 
   <div class="card">

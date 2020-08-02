@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Subscription, fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -25,6 +24,8 @@ export class HomeHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   public targetElement = null;
   public displayArrow = true;
   public state = 'base';
+
+  public menuActive = false;
 
   constructor() { }
 
@@ -63,17 +64,6 @@ export class HomeHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     this.unsubScrollEvent();
   }
 
-
-  showMenu() {
-    this.menu = true;
-    disableBodyScroll(this.targetElement);
-  }
-
-  hideMenu() {
-    this.menu = false;
-    enableBodyScroll(this.targetElement);
-  }
-
   private subToScrollEvent() {
     this.scrollSub = fromEvent(window, 'scroll')
       .pipe(debounceTime(SCROLL_TIME))
@@ -90,5 +80,9 @@ export class HomeHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
     if (!this.scrollSub.closed) {
       this.scrollSub.unsubscribe();
     }
+  }
+
+  public toggleMenu() {
+    this.menuActive = !this.menuActive;
   }
 }

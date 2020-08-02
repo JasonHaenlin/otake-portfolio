@@ -1,4 +1,5 @@
 @import '../../../variables.scss';
+@import '../../../styles/hamburger.scss';
 @import url('https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap');
 
 .background {
@@ -76,17 +77,25 @@
   justify-self: center;
 }
 
-.menu {
-  font-size: 30px;
+.hamburger {
   position: fixed;
-  z-index: 100;
+  top: 1em;
+  right: 1em;
+}
+
+.is-active {
   background: hsla(206, 74%, 10%, 0.8);
-  height: 100%;
-  width: 100%;
+}
+
+.menu {
+  position: fixed;
+  z-index: 999;
 }
 
 .menu__category {
+  z-index: 100;
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
