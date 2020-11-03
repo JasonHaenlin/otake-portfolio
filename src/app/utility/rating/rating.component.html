@@ -1,10 +1,13 @@
-<div class="rating">
-  <div class="logo" [style.background-image]="getLogo()">
+<div class="tooltip">
+  <div class="rating">
+    <div class="logo" [style.background-image]="getLogo()">
+    </div>
+    <div class="stars">
+      <i *ngFor="let star of stars"
+        class="fa-star"
+        [ngClass]="star">
+      </i>
+    </div>
   </div>
-  <div class="stars">
-    <i *ngFor="let star of stars"
-      class="fa-star"
-      [ngClass]="star">
-    </i>
-  </div>
+  <span *ngIf="tooltip" class="tooltiptext">{{tooltip}}</span>
 </div>

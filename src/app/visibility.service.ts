@@ -23,7 +23,7 @@ export class VisibilityService {
   }
 
   elementInSight(element: ElementRef): Observable<boolean> {
-    const elementVisible$ = Observable.create(observer => {
+    const elementVisible$ = new Observable(observer => {
       const intersectionObserver = new IntersectionObserver(entries => {
         observer.next(entries);
       });

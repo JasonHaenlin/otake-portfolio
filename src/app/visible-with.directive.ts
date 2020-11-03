@@ -1,6 +1,6 @@
-import { Directive, TemplateRef, ViewContainerRef, Input, ElementRef, EmbeddedViewRef } from '@angular/core';
-import { VisibilityService } from './visibility.service';
+import { Directive, ElementRef, EmbeddedViewRef, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { filter, take } from 'rxjs/operators';
+import { VisibilityService } from './visibility.service';
 
 @Directive({
   selector: '[appVisibleWith]'
@@ -20,13 +20,7 @@ export class VisibleWithDirective {
       .elementInSight(new ElementRef(element))
       .pipe(filter(v => v), take(1))
       .subscribe((visible: boolean) => {
-        console.log(visible);
-
-        // if (visible) {
         this.viewContainer.createEmbeddedView(this.templateRef);
-        // } else {
-        // this.viewContainer.clear();
-        // }
       });
   }
 

@@ -1,13 +1,13 @@
 <div *ngIf="notif" class="header-info card">
   <div class="card__text">
-    Looking for an apprenticeship for the last year (starts in September) in GUI.
+    Looking for an intership of 6 months for my last year in GUI
   </div>
   <div class="card__button" (click)="updateShowNotif()">
     <span class="fas fa-times fa-2x"></span>
   </div>
-  <div class="card__icon">
+  <!-- <div class="card__icon">
     <div class="fas fa-exclamation fa-2x"></div>
-  </div>
+  </div> -->
 </div>
 <div *ngIf="!notif">
   <div class="padding-around notif-open" (click)="updateShowNotif()">
