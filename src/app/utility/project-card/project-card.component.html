@@ -15,6 +15,10 @@
       </div>
     </div>
     <div class="link grid-link">
+      <a *ngIf="websiteLink" target="_blank" rel="noopener noreferrer"
+        [href]="websiteLink">
+        <span style="color:white;" class="fas fa-link"></span>
+      </a>
       <a *ngIf="githubLink" target="_blank" rel="noopener noreferrer"
         [href]="githubLink">
         <img src="../../../assets/logos/GitHub-Mark-Light-120px-plus.png" alt="<(^^)>">

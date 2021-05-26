@@ -7,6 +7,7 @@ export interface ProjectDef {
   image: string;
   githubLink?: string;
   videoLink?: string;
+  websiteLink?: string;
   skills: string[];
 }
 
@@ -289,6 +290,7 @@ export class HomeProjectComponent implements OnInit {
       ],
       image: 'pico.png',
       githubLink: 'https://github.com/JasonHaenlin/pico-8-sophiaquest',
+      websiteLink: 'https://pico.otakedev.com'
     },
     {
       title: '"Connected House" | Web application & IOT',

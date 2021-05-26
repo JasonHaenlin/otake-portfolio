@@ -11,6 +11,7 @@ export class ProjectCardComponent implements OnInit {
   @Input() description!: string;
   @Input() githubLink!: string;
   @Input() videoLink?: string;
+  @Input() websiteLink?: string;
   @Input() title!: string;
   @Input() techno!: string;
   @Input() skills: string[] = [];
