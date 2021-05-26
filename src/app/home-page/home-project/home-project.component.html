@@ -2,85 +2,20 @@
   <strong>PROJECTS</strong>
 </div>
 
-<app-project-card
-  [side]="'left'"
-  [description]="'Multi micro-services architecture using Domain Driven Design and Hexagonal Architecture.\ Spring-boot for a micro-service with mongoDB has the database. \n To integrate everything, we used Docker and Jenkins. To reduce the coupling, we used Kafka to make a messaging oriented communication.'"
-  [image]="'soa.png'">
+<app-project-card *ngFor="let p of projects"
+  [title]="p.title"
+  [techno]="p.technos"
+  [description]="p.description"
+  [image]="p.image"
+  [githubLink]="p.githubLink"
+  [videoLink]="p.videoLink"
+  [skills]="p.skills">
 </app-project-card>
 
-<app-project-card
-  [side]="'right'"
-  [description]="'Flutter project.\n School project in GUI Adaptation on different devices size and orientation. \n Vocal mode was implemented to offer the user to interact with the application using key words to navigate in the application when he cannot use his/her hands.'"
-  [image]="'gred.png'"
-  [githubLink]="'https://github.com/otakedev/gred-mobile'">
-</app-project-card>
-
-<app-project-card
-  [side]="'left'"
-  [description]="'Flutter & Antlr Java project.\nFull-time school project of 3 weeks for the Olympic Games in Paris. Creation of a dedicated language with Antlr business oriented for the organizer and development of an application in flutter to help user navigation.'"
-  [image]="'flutter-ps7.png'"
-  [githubLink]="'https://github.com/JasonHaenlin/PNS-PS7-19-20-al-ihm1'"
-  [videoLink]="'https://www.youtube.com/watch?v=0uQLtrn3Mx0&list=PLbQAhnCaXQExOiHmJebG23umviozvgpKl&index=1'">
-</app-project-card>
-
-<app-project-card
-  [side]="'right'"
-  [description]="'First project using Flutter and BLoC pattern to improve myself with the Framework'"
-  [image]="'flutter.png'"
-  [githubLink]="'https://github.com/JasonHaenlin/otake_flutter_home'">
-</app-project-card>
-
-<app-project-card
-  [side]="'left'"
-  [description]="'A semester project consisting of a website to help students prepare for their stay abroad.\n
-    Front-end: Angular 7\n
-    Back-end: Nodejs + Knex + PostgreSQL\n
-    CI: Jenkins + SonarQube + Snyk\n
-    Link :https://ps.otakedev.com'"
-  [image]="'ps.png'"
-  [githubLink]="'https://github.com/JasonHaenlin/2018-2019-ps6-otake'">
-</app-project-card>
-
-<app-project-card
-  [side]="'right'"
-  [description]="'Retro gaming pico-8 competition (3rd of 22).\n
-    Language: Lua'"
-  [image]="'pico.png'"
-  [githubLink]="'https://github.com/JasonHaenlin/pico-8-sophiaquest'">
-</app-project-card>
-
-<app-project-card
-  [side]="'left'"
-  [description]="'Creation of a website allowing incident management in a connected house.\n Visualization of incidents on a web        interface. Using Angular 5 for the front end and Nodejs for the back end.\n
-    As well as the implementation of a local node-red server with MQTT protocol for communication with sensors/actuators.'"
-  [image]="'ps6-1.jpg'"
-  [githubLink]="'https://github.com/JasonHaenlin/SI3-S6-WebAngular'">
-</app-project-card>
-
-<app-project-card
-  [side]="'right'"
-  [description]="'Architecture Project.\n
-  Creation of a CPU based on the ARM architecture with simplifications. The main purpose of the project is to undersand the concept behind a CPU using basic assembly instructions.'"
-  [image]="'archi.png'"
-  [githubLink]="'https://github.com/JasonHaenlin/Arms-and-Legs'">
-</app-project-card>
-
-<app-project-card
-  [side]="'left'"
-  [description]="'This is a school project using JAVA from the 1st year in computer engineering at Polytech Nice-Sophia from 2018.\n The current version implements the classic version of the platform game Dice Forge, without some Hero Feat cards which need to be activated. .'"
-  [image]="'diceforge.jpg'"
-  [githubLink]="'https://github.com/JasonHaenlin/PS5-18-19-DiceForge-EquipeB'">
-</app-project-card>
-
-<app-project-card
-  [side]="'right'"
-  [description]="'Android project to manage incidents/events within the university.\n Using Firebase for the backend (Realtime Database + cloud function + storage).'"
-  [image]="'android.jpg'"
-  [githubLink]="'https://github.com/JasonHaenlin/SI3-S6-AndroidProject'">
-</app-project-card>
 
 <!-- <app-project-card
-  [side]="'right'"
+  [title]="''"
+  [techno]="''"
   [description]="'Realization of a space invader style game\n
     Mbed Compiler : C/C++ language used\n
     Hardware: Matrix leds 16*16 - Joysticks - LCD display 16*2 - 2 buttons -2 Speakers -1
@@ -90,7 +25,8 @@
 </app-project-card> -->
 
 <!-- <app-project-card
-  [side]="'left'"
+  [title]="''"
+  [techno]="''"
   [description]="'Project of a tricycle connected using sensors and via cloud services IBM bluemix\n
 We use the DU4SmartCities on MBED to start the project.'"
   [image]="'er4.jpg'"
@@ -98,7 +34,8 @@ We use the DU4SmartCities on MBED to start the project.'"
 </app-project-card> -->
 
 <!-- <app-project-card
-  [side]="'right'"
+  [title]="''"
+  [techno]="''"
   [description]="'Electrically assisted bicycle.\n
     Mbed Compiler: C/C++ language used.\n
     Quartus was used with an Altera to configure the brushless motor.'"
@@ -107,7 +44,8 @@ We use the DU4SmartCities on MBED to start the project.'"
 </app-project-card> -->
 
 <!-- <app-project-card
-  [side]="'left'"
+  [title]="''"
+  [techno]="''"
   [description]="'Realization of an automated biomedical station\n
     Mbed Compiler : C/C++ language used\n
     Quartus: configuration of an Altera in VHDL and logical block'"
@@ -116,7 +54,8 @@ We use the DU4SmartCities on MBED to start the project.'"
 </app-project-card> -->
 
 <!-- <app-project-card
-  [side]="'right'"
+  [title]="''"
+  [techno]="''"
   [description]="'Line following robot\n
     Mbed Compiler : C/C++ language used'"
   [image]="'er1.png'"

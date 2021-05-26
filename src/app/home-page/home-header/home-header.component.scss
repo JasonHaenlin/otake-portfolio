@@ -2,17 +2,6 @@
 @import '../../../styles/hamburger.scss';
 @import url('https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap');
 
-.background {
-  max-width: 100%;
-  height: calc(30em + calc(2em - 10vw));
-  background: linear-gradient(hsla(203, 71%, 26%, 0.5), hsla(203, 71%, 26%, 0.5)),
-    url('../../../assets/bg-prog.jpg');
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(8px);
-}
 
 .container-option {
   position: fixed;

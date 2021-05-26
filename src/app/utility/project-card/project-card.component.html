@@ -1,13 +1,20 @@
 <div class="grid-container">
-  <div [ngClass]="{
-    'grid-svg1': side !== 'right',
-    'grid-svg2': side === 'right'
-    }"
+  <div class="grid-svg"
     [style.background-image]="image">
   </div>
-  <div class="rect grid-rect">
-    <div [innerHTML]="description"></div>
-    <div class="link">
+  <div class="rect grid-rect grid-card">
+    <div class="grid-title"><strong>{{title}}</strong></div>
+    <div class="grid-techno">
+      <div *ngFor="let t of techno">{{t}}</div>
+    </div>
+    <div class="grid-description" [innerHTML]="description"></div>
+    <div class="grid-skills">
+      <div *ngFor="let skill of skills">
+        <span class="fas fa-check-square fa-2x" style="padding-right: 20px;"></span>
+        <span>{{skill}}</span>
+      </div>
+    </div>
+    <div class="link grid-link">
       <a *ngIf="githubLink" target="_blank" rel="noopener noreferrer"
         [href]="githubLink">
         <img src="../../../assets/logos/GitHub-Mark-Light-120px-plus.png" alt="<(^^)>">

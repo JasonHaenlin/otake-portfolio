@@ -7,16 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectCardComponent implements OnInit {
 
-  @Input() image: string;
-  @Input() side: string;
-  @Input() description: string;
-  @Input() githubLink: string;
-  @Input() videoLink: string;
+  @Input() image!: string;
+  @Input() description!: string;
+  @Input() githubLink!: string;
+  @Input() videoLink?: string;
+  @Input() title!: string;
+  @Input() techno!: string;
+  @Input() skills: string[] = [];
 
   constructor() { }
 
   ngOnInit() {
-    this.side = this.side || 'right';
     this.image = 'url(../../../assets/projects/' + this.image + ')';
     this.description = this.description.replace(new RegExp('\n', 'g'), '<br>');
   }
