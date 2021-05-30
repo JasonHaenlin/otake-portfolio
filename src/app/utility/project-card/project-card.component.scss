@@ -46,9 +46,14 @@ skills {
 .grid-svg {
   grid-area: svg;
   margin-right: 1em;
-  border-radius: 8px;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+  }
 }
 
 .grid-rect {
@@ -77,24 +82,32 @@ skills {
   }
 }
 
-.fas:hover,
-img:hover {
+.grid-link .fas:hover,
+.grid-link img:hover {
   cursor: pointer;
   filter: drop-shadow(-10px 1px 10px #3792a4) drop-shadow(10px 10px 10px #f0bc5c) drop-shadow(10px -10px 10px #bc451a);
 }
 
 @media (max-width: 1100px) {
   .grid-container {
-    grid-template-columns: 5vw 20vw 1fr 20vw 5vw;
-    grid-template-rows: 15em minmax(10em, auto);
+    grid-template-columns: 1fr;
+    grid-template-rows: 20em minmax(10em, 1fr);
     grid-template-areas:
-      " . svg svg svg ."
-      " . rect rect rect .";
+      "svg"
+      "rect";
+    padding-bottom: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
 
   .grid-svg {
     margin-right: 0;
     margin-bottom: 1em;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
 
 }

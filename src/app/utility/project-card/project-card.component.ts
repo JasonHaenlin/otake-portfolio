@@ -19,7 +19,7 @@ export class ProjectCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.image = 'url(../../../assets/projects/' + this.image + ')';
+    this.image = 'assets/projects/' + this.image;
     this.description = this.description.replace(new RegExp('\n', 'g'), '<br>');
   }
 
