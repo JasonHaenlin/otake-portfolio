@@ -1,5 +1,9 @@
 @import '../../../variables.scss';
 
+:host {
+  color: white;
+}
+
 svg {
   position: relative;
   bottom: -1em;
@@ -11,7 +15,7 @@ footer {
   padding-left: 1em;
   padding-right: 1em;
   width: 100%;
-  background-color: $blue2;
+  background-color: $blue3;
 }
 
 img {

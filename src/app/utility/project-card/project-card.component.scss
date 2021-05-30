@@ -1,11 +1,15 @@
 @import '../../../variables.scss';
 
 .grid-container {
+  border-radius: 8px;
+  border: 2px solid #eaf7ff;
   display: grid;
-  grid-template-columns: 5em 20em 1fr 5em;
+  grid-template-columns: 20em 1fr;
   grid-template-rows: minmax(10em, 1fr);
-  grid-template-areas: ". svg rect .";
-  padding-bottom: 2em;
+  grid-template-areas: "svg rect";
+  margin-bottom: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
 .grid-card {
@@ -31,16 +35,20 @@ skills {
 }
 
 .grid-techno {
-  color: $yellowA;
+  color: $redA;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem;
 }
 
+.grid-skills {
+  color: $blue2;
+}
+
 .grid-title {
   font-size: 23px;
   padding-top: 0.5em;
-  color: $redA;
+  color: $blue1;
 }
 
 .grid-svg {
@@ -62,7 +70,7 @@ skills {
 
 .rect {
   position: relative;
-  background-color: hsla(0, 0%, 100%, 0.1);
+  background-color: #eaf7ff;
   border-radius: 8px;
   height: 100%;
   padding: 1em;
@@ -74,6 +82,7 @@ skills {
 
   >a {
     padding: 1em;
+    color: #f0bc5c;
   }
 
   img {

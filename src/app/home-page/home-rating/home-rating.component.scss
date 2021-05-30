@@ -3,6 +3,7 @@
 .title {
   padding: 2em;
   font-size: 28px;
+  color: $blue2;
 }
 
 .flex-container {
@@ -10,13 +11,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: #eaf7ff;
 }
 
 .rating {
   // overflow: hidden;
   width: 8em;
   height: 10em;
-  background-color: $blueO;
+  background-color: $blue3;
   border-radius: 4%;
   margin: 1em;
 }

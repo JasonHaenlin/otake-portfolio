@@ -15,6 +15,7 @@ circle {
 .title {
   padding: 2em;
   font-size: 28px;
+  color: $blue2;
 }
 
 .flex-container {
@@ -22,6 +23,7 @@ circle {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #eaf7ff;
 }
 
 .flex-container>div,

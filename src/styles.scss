@@ -1,5 +1,5 @@
 @import './variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -15,6 +15,6 @@ body {
 }
 
 html {
-  font: 400 20px/32px 'Exo', sans-serif;
-  color: $white;
+  font: 400 20px/32px 'Roboto', sans-serif;
+  color: #1f1f1f;
 }

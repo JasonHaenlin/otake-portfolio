@@ -10,22 +10,22 @@
     <div class="grid-description" [innerHTML]="description"></div>
     <div class="grid-skills">
       <div *ngFor="let skill of skills">
-        <span class="fas fa-check-square fa-2x" style="padding-right: 20px;"></span>
-        <span>{{skill}}</span>
+        <!-- <span class="fas fa-check-square fa-2x" style="padding-right: 20px;"></span> -->
+        <span>- {{skill}}</span>
       </div>
     </div>
     <div class="link grid-link">
       <a *ngIf="websiteLink" target="_blank" rel="noopener noreferrer"
         [href]="websiteLink">
-        <span style="color:white;" class="fas fa-link"></span>
+        <span class="fas fa-link"></span>
       </a>
       <a *ngIf="githubLink" target="_blank" rel="noopener noreferrer"
         [href]="githubLink">
-        <img src="../../../assets/logos/GitHub-Mark-Light-120px-plus.png" alt="<(^^)>">
+        <img src="../../../assets/logos/GitHub-Mark-120px-plus.png" alt="<(^^)>">
       </a>
       <a *ngIf="videoLink" target="_blank" rel="noopener noreferrer"
         [href]="videoLink">
-        <img src="../../../assets/logos/yt_logo_mono_dark.png" alt="<(^^)>">
+        <img src="../../../assets/logos/yt_logo_rgb_light.png" alt="<(^^)>">
       </a>
     </div>
   </div>

@@ -1,6 +1,10 @@
 @import '../../../variables.scss';
 @import '../../../styles/hamburger.scss';
-@import url('https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400&display=swap');
+
+:host {
+  color: $white;
+}
 
 
 .container-option {
@@ -23,7 +27,7 @@
 // linear-gradient(to right, $yellowA 0%, $blue3 50%, $redA 100%);
 
 .card {
-  background: linear-gradient(to bottom, $blue3 0%, $blue2 50%, $blue2b 100%);
+  background: linear-gradient(to top, white 0%, $blue3 30%, $blue2 100%);
   // color: #333;
   color: $white;
   height: 100vh;
@@ -49,14 +53,15 @@
 
 .card_title {
   grid-area: title;
-  font-family: 'Lexend Giga', sans-serif;
-  font-size: 32px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 80px;
 }
 
 .card_occupation {
   grid-area: occupation;
-  font-family: 'Lexend Giga', sans-serif;
-  font-size: 18px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
 }
 
 .card_picture {

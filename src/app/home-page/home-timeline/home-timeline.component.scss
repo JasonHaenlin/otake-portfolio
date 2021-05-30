@@ -3,6 +3,7 @@
 .title {
   padding: 2em;
   font-size: 28px;
+  color: $blue2;
 }
 
 .content {
@@ -12,11 +13,12 @@
 }
 
 .content::before {
+  border-radius: 8px;
   position: absolute;
   height: 100%;
   left: 8em;
   width: 5px;
-  background-color: $blue2;
+  background-color: $blue3;
   content: "";
 }
 

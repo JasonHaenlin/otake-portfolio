@@ -22,33 +22,33 @@ export class HomeProjectComponent implements OnInit {
     {
       title: '"Accenture : Dashboard KPI" |  Ingénieur logiciel - Stagiaire R&D',
       technos: [
-        "Angular 10",
-        "NgRx",
-        "Angular Material",
-        "Spring-boot",
-        "AspectJ",
-        "MongoDB",
-        "Cypress"
+        'Angular 10',
+        'NgRx',
+        'Angular Material',
+        'Spring-boot',
+        'AspectJ',
+        'MongoDB',
+        'Cypress'
       ],
       description: 'Frontend and Backend project to improve monitoring of "Agile" projects on a single page Dashboard',
       skills: [
-        "Retrieve and format project resources via the JIRA API",
-        "Dashboard with metrics and graphs (Sprint, Epic, US, bugs, etc.)",
-        "Permission and session management with Spring Security and Angular Guard",
-        "Multiple roles per dashboard: Viewer, Editor and Administrator",
-        "AOP for cross-functional concerns (e.g. logs)",
-        "Helped by 6 supervisors to plan (Planning, Retrospective, demo, etc.)",
-        "End of project demo in English in front of 30+ people"
+        'Retrieve and format project resources via the JIRA API',
+        'Dashboard with metrics and graphs (Sprint, Epic, US, bugs, etc.)',
+        'Permission and session management with Spring Security and Angular Guard',
+        'Multiple roles per dashboard: Viewer, Editor and Administrator',
+        'AOP for cross-functional concerns (e.g. logs)',
+        'Helped by 6 supervisors to plan (Planning, Retrospective, demo, etc.)',
+        'End of project demo in English in front of 30+ people'
       ],
       image: 'dashboardkpi.png',
     },
     {
       title: '"Receptif Voyages" | Frontend Dev Freelance',
       technos: [
-        "Angular 10",
-        "Jenkins",
-        "Zeplin",
-        "Adobe XD"
+        'Angular 10',
+        'Jenkins',
+        'Zeplin',
+        'Adobe XD'
       ],
       description: 'Complete redesign of a commercial website for booking and planning grouped trips to the USA and Canada.',
       skills: [

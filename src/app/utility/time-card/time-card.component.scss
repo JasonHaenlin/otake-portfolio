@@ -1,11 +1,12 @@
 @import '../../../variables.scss';
 
 .grid-card {
-  background-color: $blueO;
+  border: 2px solid #eaf7ff;
+  background-color: #eaf7ff;
   border-radius: 1em;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 15em minmax(auto, 30ch);
+  grid-template-columns: 15em 1fr;
   grid-template-rows: 6ch 3ch 3ch minmax(5em, auto);
   grid-template-areas:
     "logo title"
@@ -27,17 +28,17 @@
   font-size: 23px;
   padding-top: 0.5em;
   grid-area: title;
-  color: $redA;
+  color: $blue1;
 }
 
 .grid-venue {
   grid-area: venue;
-  color: $yellowA;
+  color: $redA;
 }
 
 .grid-date {
   grid-area: date;
-  color: rgba(255, 255, 255, 0.6);
+  color: $blue2b;
   font-size: 16px;
 }
 
