@@ -20,7 +20,34 @@ export class HomeProjectComponent implements OnInit {
 
   public projects: ProjectDef[] = [
     {
-      title: '"Accenture : Dashboard KPI" |  Ingénieur logiciel - Stagiaire R&D',
+      title: '"Amadeus : Debugging tool" | Software Engineer - R&D Intern',
+      technos: [
+        'Angular 12',
+        'Angular Material',
+        'Cypress',
+        'Karma',
+        'Golang',
+        'Docker',
+        'Jenkins',
+        'JIRA',
+        'RxJS'
+      ],
+      description: 'Rework from scratch a tool to ease debugging, visualization, navigation and exploration of huge amounts of data',
+      skills: [
+        'Study on a generic table concept',
+        'User-centered approach with demos, forms, meetings, etc.',
+        'Study and analysis of developers\' needs',
+        'Agile project with mocks, prototypes and development',
+        'Use of a personal package to maintain the state of a service using RxJS',
+        'Normalizr to manage and normalize the deep nested models',
+        'Big optimization work to display tons of tables, rows and cells',
+        'Optimize javascript events to edit data',
+        'Maintain the product, answer all questions and problems',
+      ],
+      image: 'amadeus.png',
+    },
+    {
+      title: '"Accenture : Dashboard KPI" |  Software Engineer - R&D Intern',
       technos: [
         'Angular 10',
         'NgRx',
