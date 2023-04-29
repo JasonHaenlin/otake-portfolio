@@ -35,7 +35,7 @@
   padding-top: 10em;
   padding-bottom: 0;
   display: grid;
-  grid-template-rows: 2em 4em 2em 30vw 1fr;
+  grid-template-rows: 8em 4em 2em 30vw 1fr;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "title picture"
@@ -55,6 +55,7 @@
   grid-area: title;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 80px;
+  line-height: 1em;
 }
 
 .card_occupation {
@@ -167,7 +168,7 @@ a {
   .card {
     padding: 0.5em;
     height: auto;
-    grid-template-rows: 10em 4em 4em 2em 1fr;
+    grid-template-rows: 10em 1fr 4em 2em 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
       "picture"
